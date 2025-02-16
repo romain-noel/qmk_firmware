@@ -34,3 +34,11 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 ## Official Website
 
 [qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
+
+## ROMAIN: My How To:
+
+```bash
+qmk compile -kb sofle_choc -km RN
+
+qmk flash -kb sofle_choc -km RN -e CONVERT_TO=helios
+```
