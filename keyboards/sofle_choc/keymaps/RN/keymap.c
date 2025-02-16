@@ -1,4 +1,3 @@
-
  /* Copyright 2021 Dane Evans
   *
   * This program is free software: you can redistribute it and/or modify
@@ -46,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                  KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, KC_MPLY,  XXXXXX, KC_N,    KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_DEL,
+    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, KC_MPLY,   KC_NO , KC_N,    KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_DEL,
                 TT(_LOWER), KC_LALT, KC_LGUI, KC_LCTL, KC_SPC,  KC_ENT, KC_RCTL, KC_APP, KC_RALT, TT(_RAISE)
 ),
 
@@ -65,10 +64,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `-----------------------------------'           '------''---------------------------'
  */
 [_LOWER] = LAYOUT(
-   	KC_ESC,  KC_VOLD, KC_VOLU, KC_MPLY, KC_MRWD, KC_MFFD, XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX, KC_DEL,
-    KC_MUTE, XXXXXX,   XXXXXX,   XXXXXX,   XXXXXX,   XXXXXX,   KC_PGUP, XXXXXX,   KC_UP,   XXXXXX,   XXXXXX,   XXXXXX,
-    KC_CAPS, KC_INS,  KC_HOME, KC_PAUS, XXXXXX,   KC_BRIU, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXX,   KC_BSPC,
-    KC_LSFT, KC_DEL,  KC_END,  KC_PSCR, KC_SCRL, KC_BRID, XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX, KC_RSFT,
+   	KC_ESC,  KC_VOLD, KC_VOLU, KC_MPLY, KC_MRWD, KC_MFFD,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO , KC_DEL,
+    KC_MUTE,  KC_NO ,    KC_NO ,    KC_NO ,    KC_NO ,    KC_NO ,   KC_PGUP,  KC_NO ,   KC_UP,    KC_NO ,    KC_NO ,    KC_NO ,
+    KC_CAPS, KC_INS,  KC_HOME, KC_PAUS,  KC_NO ,   KC_BRIU, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT,  KC_NO ,   KC_BSPC,
+    KC_LSFT, KC_DEL,  KC_END,  KC_PSCR, KC_SCRL, KC_BRID,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO , KC_RSFT,
     TT(_LOWER), KC_LALT, KC_LGUI, KC_LCTL, KC_SPC, KC_ENT, KC_RCTL, KC_APP, KC_LALT, TT(_RAISE)
 ),
 
@@ -90,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    	KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_F12,
     KC_CAPS, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
-    KC_LSFT, KC_EQL,  KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, XXXXXX,   XXXXXX,   KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_RSFT,
+    KC_LSFT, KC_EQL,  KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR,  KC_NO ,    KC_NO ,   KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, KC_RSFT,
     TT(_LOWER), KC_LALT, KC_LGUI, KC_LCTL, KC_SPC, KC_ENT, KC_RCTL, KC_APP, KC_LALT, TT(_RAISE)
 ),
 
@@ -109,11 +108,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `-----------------------------------'           '------''---------------------------'
  */
 [_ADJUST] = LAYOUT(
-    EE_CLR,  XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX,                   XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX,
-    QK_BOOT, XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX,                    XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX, XXXXXX,
-    UG_TOGG, UG_HUEU,UG_SATU, UG_VALU, XXXXXX,XXXXXX,             C(G(KC_LEFT)),XXXXXX,XXXXXX,C(G(KC_RGHT)),XXXXXX, XXXXXX,
-    UG_NEXT, UG_HUED,UG_SATD, UG_VALD, XXXXXX,XXXXXX,XXXXXX,   XXXXXX, XXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXX, XXXXXX,
-                    MO(_LOWER), XXXXXX, XXXXXX, XXXXXX, XXXXXX,     XXXXXX, XXXXXX, XXXXXX, XXXXXX, MO(_RAISE)
+    EE_CLR,   KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,                    KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,
+    QK_BOOT,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,                     KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,
+    UG_TOGG, UG_HUEU,UG_SATU, UG_VALU,  KC_NO , KC_NO ,             C(G(KC_LEFT)), KC_NO , KC_NO ,C(G(KC_RGHT)), KC_NO ,  KC_NO ,
+    UG_NEXT, UG_HUED,UG_SATD, UG_VALD,  KC_NO , KC_NO , KC_NO ,    KC_NO ,  KC_NO , KC_MPRV, KC_MPLY, KC_MNXT,  KC_NO ,  KC_NO ,
+                    MO(_LOWER),  KC_NO ,  KC_NO ,  KC_NO ,  KC_NO ,      KC_NO ,  KC_NO ,  KC_NO ,  KC_NO , MO(_RAISE)
 ),
 
 };
