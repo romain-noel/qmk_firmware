@@ -43,3 +43,6 @@ qmk compile -kb sofle_choc -km RN
 
 qmk flash -kb sofle_choc -km RN -e CONVERT_TO=helios
 ```
+
+Link to my files:
+- [keymaps](./keyboards/sofle_choc/keymaps/RN/keymap.c)
