@@ -109,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void keyboard_post_init_user(void) {
 	rgb_matrix_enable();
 	rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
-	rgb_matrix_sethsv(0,0,255); // white
+	rgb_matrix_sethsv(0,0,100); // white
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -119,16 +119,16 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // Adapt color to the layer.
     switch (layer) {
         case _QWERTY:
-            rgb_matrix_sethsv(240, 0, 255); // white
+            rgb_matrix_sethsv(240, 0, 100); // white
             break;
         case _LOWER:
-            rgb_matrix_sethsv(0, 255, 255); // red
+            rgb_matrix_sethsv(0, 255, 100); // red
             break;
         case _RAISE:
-            rgb_matrix_sethsv(168, 255, 255); // blue
+            rgb_matrix_sethsv(168, 255, 100); // blue
             break;
         case _ADJUST:
-            rgb_matrix_sethsv(84, 255, 255); // green
+            rgb_matrix_sethsv(84, 255, 100); // green
             break;
         default:
             // For any other layer, you might want a default behavior
